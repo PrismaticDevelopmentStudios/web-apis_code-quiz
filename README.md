@@ -15,9 +15,7 @@ This web application is a web development quiz that stores high scores by using 
 <a href="https://www.linkedin.com/in/matthewbrignola/">LinkedIn</a> <br>
 <a href="https://github.com/PrismaticDevelopmentStudios">GitHub</a> <br>
 ## Technologies
-HTML
-CSS
-JavaScript
+HTML - CSS - JavaScript
 ## Video
 <a href="">Video Hosted With Google Drive</<a>
 ## Instructions
