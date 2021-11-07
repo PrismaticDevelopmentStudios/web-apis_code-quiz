@@ -1,7 +1,7 @@
 # web-apis_code-quiz
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 ## Descripton
-This web application is a web development quiz that stores high scores by using the quiz taker's storage on their local computer.
+This web application is a web development quiz that stores a user's high scores by using the quiz taker's storage on their local computer.
 
 
 ## Table of Contents
