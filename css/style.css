@@ -1,8 +1,9 @@
+/* Applies Google Font */
 body {
     font-family: 'Inconsolata', monospace;
-font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
-
+/* Button CSS */
 .nextBtn {
     background-color: green;
     padding: .5%;
@@ -30,7 +31,7 @@ font-family: 'Roboto', sans-serif;
     float: left;
     left: 0;
 }
-
+/* List Items */
 li {
     display: none;
 }
