@@ -1,5 +1,6 @@
-// DOM Elements for Quiz Generation
+// Entire Page Element -not currently being used
 const quizPage = document.getElementById('quiz');
+// DOM Elements for Quiz Generation
 const nextBtn = document.createElement('button');
 const backBtn = document.createElement('button');
 const showCurrent = document.createElement('h1');
