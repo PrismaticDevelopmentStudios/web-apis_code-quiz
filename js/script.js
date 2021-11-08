@@ -24,13 +24,13 @@ quizPage.appendChild(nextBtn);
 quizPage.appendChild(backBtn);
 ol.appendChild(li);
 // Individual questions
-const q1 = '1. What does the acronym "API" stand for?';
+const q1 = '1. What basic JavaScript method that prints out values?'
 //  Application programming interface
-const q2 = '2. What of these options are part of the 3 different "stack"s of web development?';
+const q2 = '2. Which of these options are part of the 3 different "stack"s of web development?';
 // Front end, Back end, Full stack
 const q3 = '3. What is the difference between a "var" and a "const" in JavaScript?';
 // A var is a value that can be changed multiple times 
-const q4 = '4. What basic JavaScript method that prints out values?';
+const q4 = '4. What does the acronym "API" stand for?';;
 // condole.log()
 const q5 = '5. What is a turnary operator?';
 // it's ahort hand syntax for an if statement
