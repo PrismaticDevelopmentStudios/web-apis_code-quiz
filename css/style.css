@@ -1,0 +1,41 @@
+.nextBtn {
+    background-color: green;
+    padding: .5%;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin-left: 3%;
+    margin-right: 3%;
+    height: 5rem;
+    position: absolute;
+    float: right;
+    right: 0;
+}
+
+.backBtn {
+    background-color: green;
+    padding: .5%;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin-left: 3%;
+    margin-right: 3%;
+    height: 5rem;
+    position: absolute;
+    float: left;
+    left: 0;
+}
+
+li {
+    display: none;
+}
+
+.li {
+    font-size: 2em;
+    display: block;
+    position: absolute;
+    margin-left: 10%;
+    margin-right: 15%;
+}
+
+
