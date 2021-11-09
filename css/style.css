@@ -1,9 +1,13 @@
 /* Applies Google Font */
+
 body {
     font-family: 'Inconsolata', monospace;
     font-family: 'Roboto', sans-serif;
 }
+
+
 /* Button CSS */
+
 .nextBtn {
     background-color: green;
     padding: .5%;
@@ -11,11 +15,13 @@ body {
     color: white;
     cursor: pointer;
     margin-left: 3%;
-    margin-right: 3%;
+    margin-right: 1%;
     height: 5rem;
     position: absolute;
     float: right;
     right: 0;
+    font-size: 2em;
+    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.5);
 }
 
 .backBtn {
@@ -24,14 +30,44 @@ body {
     border-radius: 5px;
     color: white;
     cursor: pointer;
-    margin-left: 3%;
-    margin-right: 3%;
+    margin-left: 0%;
     height: 5rem;
     position: absolute;
     float: left;
     left: 0;
+    font-size: 2em;
+    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.5);
 }
+
+.startBtn {
+    padding: .5%;
+    margin-left: 45%;
+    outline: none;
+    border: none;
+    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 10%;
+}
+
+.startBtn:hover {
+    background-color: greenyellow;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    padding: .75%;
+    font-size: 1.2em;
+}
+
+.startBox {
+    position: absolute;
+    margin-left: 15%;
+    margin-right: 15%;
+    display: inline-block;
+}
+
+
 /* List Items */
+
 li {
     display: none;
 }
@@ -44,4 +80,14 @@ li {
     margin-right: 15%;
 }
 
+footer {
+    position: fixed;
+    bottom: 0;
+    font-weight: 900;
+}
 
+.current {
+    position: absolute;
+    top: 0;
+    left: 10%;
+}
