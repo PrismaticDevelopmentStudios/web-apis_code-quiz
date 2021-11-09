@@ -3,7 +3,7 @@ const quizPage = document.getElementById('quiz');
 // DOM Elements for Quiz Generation
 const nextBtn = document.createElement('button');
 const backBtn = document.createElement('button');
-const showCurrent = document.createElement('h1');
+const showCurrent = document.createElement('h2');
 const title = document.createElement('h1');
 const timer = document.createElement('h2');
 const footer = document.createElement('footer');
@@ -16,6 +16,7 @@ let li = document.createElement('li');
 // Appending the DOM Elements
 quizPage.appendChild(title);
 quizPage.appendChild(timer);
+timer.setAttribute('class', 'timer')
 quizPage.appendChild(footer);
 quizPage.appendChild(contentDiv);
 quizPage.appendChild(startBox);
@@ -69,7 +70,7 @@ for (let i = 0; i < quiz.length; i++) {
 // Start Variable
 let start = false;
 let time = 900000;
-timer.style.marginLeft = "5%";
+timer.style.marginLeft = "2%";
 if (start === false) {
     nextBtn.style.display = 'none';
     backBtn.style.display = 'none';
@@ -87,6 +88,7 @@ function startQuiz() {
     nextBtn.style.display = 'block';
     backBtn.style.display = 'block';
     timer.style.display = 'block';
+    title.style.display = 'none';
 
     function countdown(minutes) {
         var seconds = 60;
