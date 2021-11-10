@@ -44,10 +44,21 @@ timer.setAttribute('class', 'timer');
 // startBox Text
 startBox.textContent = "Welcome to the Prismatic Development Studios' web developer quiz. Click the start button to begin the timed quiz. You will have 15 minutes to complete this quiz, which will show your results immediately upon it's completion";
 // Individual questions
-const q1 = '1. What basic JavaScript method prints out values that a developer can see?';
-// console.log() 
-const q2 = '2. Which of these options are part of the 3 different "stack"s of web development?';
+// 1
+const q1 = '1. What basic JavaScript method prints  a message to the developer?';
+// console.log()
+const oneA = "console.error()";
+const oneB = "console.log()";
+const oneC = "window.print()";
+const oneD = "window.open()";
+// 2
+const q2 = '2. Choose the option that is not part of the 3 "stack"s of web development?';
 // Front end, Back end, Full stack
+const twoA = "Testing Frameworks";
+const twoB = "Backend";
+const twoC = "Front End";
+const twoD = "Full Stack";
+// 3
 const q3 = '3. What is the difference between a "var" and a "const" in JavaScript?';
 // A var is a value that can be changed multiple times 
 const q4 = '4. What does the acronym "API" stand for?';;
@@ -67,6 +78,17 @@ const q10 = '10. "Which of the following is not a testing framework?';
 const bonus = "What is an urnary operator?";
 // Questions Array
 const quiz = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10];
+const answers = [{
+    oneA,
+    oneB,
+    oneC,
+    oneD
+}, {
+    twoA,
+    twoB,
+    twoC,
+    twoD
+}];
 for (let i = 0; i < quiz.length; i++) {
     li = 0;
     li++
