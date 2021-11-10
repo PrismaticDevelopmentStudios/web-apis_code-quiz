@@ -1,45 +1,51 @@
 // Entire Page Element -not currently being used
 const quizPage = document.getElementById('quiz');
 // DOM Elements for Quiz Generation
-const nextBtn = document.createElement('button');
-const backBtn = document.createElement('button');
-const showCurrent = document.createElement('h2');
-const title = document.createElement('h1');
-const timer = document.createElement('h2');
-const footer = document.createElement('footer');
-const contentDiv = document.createElement('div');
-const startBox = document.createElement('div');
-const startButton = document.createElement('button');
+const nextBtn = document.createElement('BUTTON');
+const backBtn = document.createElement('BUTTON');
+const showCurrent = document.createElement('H2');
+const title = document.createElement('H1');
+const timer = document.createElement('H2');
+const footer = document.createElement('FOOTER');
+const contentDiv = document.createElement('DIV');
+const startBox = document.createElement('DIV');
+const startButton = document.createElement('BUTTON');
 // Ordered List Creation
-const ol = document.createElement('ol');
-let li = document.createElement('li');
-// Appending the DOM Elements
+const ol = document.createElement('OL');
+let li = document.createElement('LI');
+// Appends Children to Quiz Page
+quizPage.appendChild(ol);
 quizPage.appendChild(title);
 quizPage.appendChild(timer);
-timer.setAttribute('class', 'timer')
 quizPage.appendChild(footer);
 quizPage.appendChild(contentDiv);
 quizPage.appendChild(startBox);
 quizPage.appendChild(startButton);
 quizPage.appendChild(showCurrent);
-showCurrent.style.display = 'block';
-startButton.style.display = 'block';
-startButton.textContent = "Start";
-startBox.style.fontSize = '1.5em';
-footer.style.display = 'block';
-footer.textContent = "Prismatic Development Studios";
-title.textContent = "Web Development Quiz";
-title.style.display = 'block';
-timer.style.display = 'block';
-quizPage.appendChild(ol);
+// Main Content Div
 contentDiv.appendChild(backBtn);
 contentDiv.appendChild(nextBtn);
 ol.appendChild(li);
-// startBox 
-startBox.textContent = "Welcome to the Prismatic Development Studios' web developer quiz. Click the start button to begin the timed quiz. You will have 15 minutes to complete this quiz, which will show your results immediately upon it's completion"
-    // Individual questions
-const q1 = '1. What basic JavaScript method prints out values that a developer can see?'
-    // condole.log() 
+// Show Current
+showCurrent.style.display = 'block';
+// Start Elements
+startButton.style.display = 'block';
+startButton.textContent = "Start";
+startBox.style.fontSize = '1.5em';
+// Footer
+footer.style.display = 'block';
+footer.textContent = "Prismatic Development Studios";
+// Title
+title.textContent = "Web Development Quiz";
+title.style.display = 'block';
+// Timer
+timer.style.display = 'block';
+timer.setAttribute('class', 'timer');
+// startBox Text
+startBox.textContent = "Welcome to the Prismatic Development Studios' web developer quiz. Click the start button to begin the timed quiz. You will have 15 minutes to complete this quiz, which will show your results immediately upon it's completion";
+// Individual questions
+const q1 = '1. What basic JavaScript method prints out values that a developer can see?';
+// console.log() 
 const q2 = '2. Which of these options are part of the 3 different "stack"s of web development?';
 // Front end, Back end, Full stack
 const q3 = '3. What is the difference between a "var" and a "const" in JavaScript?';
@@ -84,7 +90,6 @@ function startQuiz() {
     startBox.style.display = 'none';
     current = 1;
     ol.children[current].style.display = 'block';
-    nextBtn.disabled = false;
     nextBtn.style.display = 'block';
     backBtn.style.display = 'block';
     timer.style.display = 'block';
@@ -161,7 +166,7 @@ startButton.addEventListener('click', () => {
     startQuiz();
 });
 // Styling
-showCurrent.setAttribute('class', 'current');
+//
 //nextBtn
 nextBtn.setAttribute("class", "nextBtn");
 nextBtn.innerHTML = '&#187';
@@ -180,5 +185,6 @@ startButton.setAttribute('class', 'startBtn');
 startBox.setAttribute('class', 'startBox')
 startBox.style.position = 'absolute';
 // Misc Elements
+showCurrent.setAttribute('class', 'current');
 ol.setAttribute('class', 'li');
 title.style.textAlign = 'center';

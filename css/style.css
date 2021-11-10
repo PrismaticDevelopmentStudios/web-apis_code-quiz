@@ -3,6 +3,8 @@
 body {
     font-family: 'Inconsolata', monospace;
     font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -78,15 +80,15 @@ body {
 
 li {
     display: none;
-    margin-left: 7%;
 }
 
 .li {
-    font-size: 2em;
+    font-size: 1.5em;
     display: block;
-    position: absolute;
-    margin-left: 0%;
     margin-right: 15%;
+    margin-left: 7%;
+    position: absolute;
+    margin-top: 5%;
 }
 
 footer {
@@ -96,10 +98,11 @@ footer {
 }
 
 .current {
+    right: 2em;
+    top: 0;
+    float: right;
+    z-index: 2;
     position: absolute;
-    top: -1%;
-    right: 3em;
-    margin-right: -3em;
 }
 
 .timer {
