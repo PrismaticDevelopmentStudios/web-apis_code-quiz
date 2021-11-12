@@ -11,13 +11,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
-    <!-- CSS Reset -->
-    <!-- <link rel="stylesheet" href="reset.css"> -->
 </head>
 
 <body>
-    <div id="quiz"></div>
-    <script src="./js/script.js"></script>
+    <div>
+        <div id="title" class="title">Web Developer Quiz</div>
+        <div class="startBox">
+            <h2 id="startTitle">Welcome to the Prismatic Development Studios' web developer quiz. Click the start button to begin the timed quiz. You will have 15 minutes to complete this quiz, which shows your results upon it's completion</h2>
+            <button id="startBtn">Start</button>
+        </div>
+        <span id="timer"></span>
+        <button id="backBtn">&#171</button>
+        <button id="nextBtn">&#187</button>
+        <div id="quiz"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/quiz.js"></script>
+    <!-- <script src="./js/script.js"></script> -->
 </body>
 
 </html>

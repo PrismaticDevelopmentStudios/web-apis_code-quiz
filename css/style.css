@@ -10,7 +10,15 @@ body {
 
 /* Button CSS */
 
-.nextBtn {
+button {
+    outline: none;
+    border: none;
+}
+
+
+/* Naxt and Back Btns */
+
+#nextBtn {
     background-color: green;
     padding: .5%;
     border-radius: 5px;
@@ -27,7 +35,7 @@ body {
     z-index: 2;
 }
 
-.backBtn {
+#backBtn {
     background-color: green;
     cursor: pointer;
     padding: .5%;
@@ -45,7 +53,15 @@ body {
     z-index: 2;
 }
 
-.startBtn {
+#nextBtn:hover,
+#backBtn:hover {
+    background-color: rgb(0, 76, 0);
+}
+
+
+/* Start Btn */
+
+#startBtn {
     padding: .5%;
     outline: none;
     border: none;
@@ -56,31 +72,39 @@ body {
     right: 2em;
 }
 
-.startBtn:hover {
-    background-color: greenyellow;
+#startBtn:hover {
+    background-color: green;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     padding: .75%;
     font-size: 1.2em;
+    color: beige;
 }
+
+
+/* END Button CSS END */
+
+
+/* Start Elements */
 
 .startBox {
-    position: absolute;
-    margin-left: 15%;
-    margin-right: 15%;
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.nextBtn:hover,
-.backBtn:hover {
-    background-color: rgb(0, 76, 0);
+#startTitle {
+    text-indent: 2em;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 
 /* List Items */
 
-li {
+
+/* li {
     display: none;
-}
+} */
 
 .li {
     font-size: 1.5em;
@@ -91,11 +115,17 @@ li {
     margin-top: 5%;
 }
 
+
+/* Footer */
+
 footer {
     position: fixed;
     bottom: 0;
     font-weight: 900;
 }
+
+
+/* Current Item Class */
 
 .current {
     right: 2em;
@@ -105,6 +135,20 @@ footer {
     position: absolute;
 }
 
-.timer {
-    z-index: 2;
+
+/* Timer */
+
+#timer {
+    font-size: 1.5em;
+    margin: 1em;
+    position: absolute;
+}
+
+
+/* Title */
+
+.title {
+    text-align: center;
+    font-size: 2em;
+    font-weight: 800;
 }
