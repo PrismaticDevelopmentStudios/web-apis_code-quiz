@@ -13,7 +13,7 @@ let started = false;
 
 // Individual questions
 // 1
-const q1 = '1. Which fundamental JavaScript object is used to display a messages to the developer?';
+const q1 = '1. Which fundamental JavaScript method is used to display a messages to the developer?';
 // Answers
 const aA = "window.print()";
 const aB = "console.log()";
