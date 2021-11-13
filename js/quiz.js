@@ -33,8 +33,8 @@ const q3 = '3. What is the difference between a "var" and a "const" in JavaScrip
 // Answers
 const cA = 'a. Var can hold a variety of values';
 const cB = 'b. Const is easily changeable';
-const cC = 'c. Const is a constant value';
-const cD = 'd. Var is an immutable value';
+const cC = `c. Const's value is immmutable`;
+const cD = 'd. Var is an immmutable value';
 // 4
 const q4 = '4. What does the acronym "API" stand for?';;
 // Answers
