@@ -9,6 +9,7 @@ const quizEl = $('#quiz');
 const li = $('<LI>');
 const p = $('<A>')
 const div = $('<DIV>');
+const button = $('<button class="answwers">Select</button>');
 
 let current = 0;
 
@@ -150,6 +151,11 @@ const answers = [{
     },
 ];
 
+// Select Answer
+function select() {
+    console.log('clicked');
+}
+
 // Hides Back & Next Buttons on Page Load
 next.hide();
 back.hide();
@@ -174,6 +180,9 @@ function startQuiz() {
         }
         let min = Math.floor(time / 60);
         let sec = time - min * 60;
+        if (sec < 10) {
+            sec = '0' + sec
+        }
         timer.text(min + ':' + sec);
         if (time === 0) {
             timer.text('Time Up').css({
@@ -188,10 +197,9 @@ function startQuiz() {
     for (let i = 0; i < questions.length; i++) {
         quizEl.append(li).html(
             '<div>' + questions[current] + '</div><br>' +
-            '<div>' + answers[current].answer1 + '</div><br>' +
-            '<div>' + answers[current].answer2 + '</div><br>' +
-            '<div>' + answers[current].answer3 + '</div><br>' +
-            '<div>' + answers[current].answer4 + '</div><br>'
+            '<div class="answers" onclick="select()">' + answers[current].answer1 + '</div><br>' + '<div class="answers" onclick="select()">' + answers[current].answer2 + '</div><br>' +
+            '<div class="answers" onclick="select()">' + answers[current].answer3 + '</div><br>' +
+            '<div class="answers" onclick="select()">' + answers[current].answer4 + '</div><br>'
         ).addClass('li');
     }
 } // END Start Quiz END
@@ -206,10 +214,9 @@ next.click(function() {
     for (let i = 0; i < questions.length; i++) {
         quizEl.append(li).html(
             '<div>' + questions[current] + '</div><br>' +
-            '<div>' + answers[current].answer1 + '</div><br>' +
-            '<div>' + answers[current].answer2 + '</div><br>' +
-            '<div>' + answers[current].answer3 + '</div><br>' +
-            '<div>' + answers[current].answer4 + '</div><br>'
+            '<div class="answers" onclick="select()">' + answers[current].answer1 + '</div><br>' + '<div class="answers" onclick="select()">' + answers[current].answer2 + '</div><br>' +
+            '<div class="answers" onclick="select()">' + answers[current].answer3 + '</div><br>' +
+            '<div class="answers" onclick="select()">' + answers[current].answer4 + '</div><br>'
         ).addClass('li');
     }
 });
@@ -222,10 +229,9 @@ back.click(function() {
     for (let i = 0; i < questions.length; i++) {
         quizEl.append(li).html(
             '<div>' + questions[current] + '</div><br>' +
-            '<div>' + answers[current].answer1 + '</div><br>' +
-            '<div>' + answers[current].answer2 + '</div><br>' +
-            '<div>' + answers[current].answer3 + '</div><br>' +
-            '<div>' + answers[current].answer4 + '</div><br>'
+            '<div class="answers" onclick="select()">' + answers[current].answer1 + '</div><br>' + '<div class="answers" onclick="select()">' + answers[current].answer2 + '</div><br>' +
+            '<div class="answers" onclick="select()">' + answers[current].answer3 + '</div><br>' +
+            '<div class="answers" onclick="select()">' + answers[current].answer4 + '</div><br>'
         ).addClass('li');
     }
 });
