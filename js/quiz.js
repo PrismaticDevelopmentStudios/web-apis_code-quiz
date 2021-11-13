@@ -7,55 +7,148 @@ const startBtn = $('#startBtn');
 const timer = $('#timer');
 const quizEl = $('#quiz');
 const li = $('<LI>');
+const p = $('<A>')
+const div = $('<DIV>');
 
 let current = 0;
-let started = false;
 
 // Individual questions
 // 1
 const q1 = '1. Which fundamental JavaScript method is used to display a messages to the developer?';
 // Answers
-const aA = "window.print()";
-const aB = "console.log()";
-const aC = "document.write()";
-const aD = "window.open()";
+const aA = "a. window.print()";
+const aB = "b. console.log()";
+const aC = "c. document.write()";
+const aD = "d. window.open()";
 // 2
 const q2 = '2. Choose the option that is NOT part of the 3 "stack"s of web development?';
 // Answers
-const bA = "Testing Frameworks";
-const bB = "Backend";
-const bC = "Front End";
-const bD = "Full Stack";
+const bA = "a. Testing Frameworks";
+const bB = "b. Backend";
+const bC = "c. Front End";
+const bD = "d. Full Stack";
 // 3
 const q3 = '3. What is the difference between a "var" and a "const" in JavaScript?';
-// A var is a value that can be changed multiple times 
+// Answers
+const cA = 'a. Var can hold a variety of values';
+const cB = 'b. Const is easily changeable';
+const cC = 'c. Const is a constant value';
+const cD = 'd. Var is an immutable value';
+// 4
 const q4 = '4. What does the acronym "API" stand for?';;
-//  Application programming interface
+// Answers
+const dA = 'a. Applied program iterations';
+const dB = 'b. Acknowledged peripheral interference';
+const dC = 'c. Analysis of page instances';
+const dD = 'd. Application programming interface';
+//5
 const q5 = '5. What is a turnary operator?';
-// it's ahort hand syntax for an if statement
+// Answers
+const eA = 'a. One line syntax for an if statement';
+const eB = 'b. Fetches data from an API';
+const eC = 'c. Allows one to change a constant';
+const eD = 'd. A mathematical method that rounds numbers';
+// 6
 const q6 = '6. What is another name for a function in JavaScript?';
-// Method
+// Answers
+const fA = 'a. Descriptor';
+const fB = 'b. Operator';
+const fC = 'c. Operation';
+const fD = 'd. Method';
+// 7
 const q7 = '7. What is the statement that commonly follows an "if" statement?';
-// Else
+// Answers
+const gA = 'a. Then';
+const gB = 'b. Which';
+const gC = 'c. Else'; // Right
+const gD = 'd. Or';
+// 8
 const q8 = '8. "What is the commonly used web framework invented by Facebook?';
-// Reaact
-const q9 = '9. What is another commonly used web framework that was invented by a Google employee?';
-// Angular
+// Answers
+const hA = 'a. Vue.js';
+const hB = 'b. React.js';
+const hC = 'c. Jest';
+const hD = 'd. Mocha';
+// 9
+const q9 = '9. What common method is used to loop over values?';
+// Answers
+const iA = 'a. Append';
+const iB = 'b. Await';
+const iC = 'c. For loop';
+const iD = 'd. If statement';
+//10
 const q10 = '10. "Which of the following is not a testing framework?';
-// Jest, Mocha, Jasmine, Nightwatch, Joker
+// Answers
+const jA = 'a. Jest';
+const jB = 'b. Django';
+const jC = 'c. Mocha';
+const jD = 'd. Jasmine';
+// Bonus
 const bonus = "What is an urnary operator?";
+// const textArea = quizEl.append(li).html('<textarea></textarea>')
 
-const questions = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10];
-const answers1 = [aA, aB, aC, aD];
-const answers2 = [bA, bB, bC, bD];
-const answers3 = [];
-const answers4 = [];
-const answers5 = [];
-const answers6 = [];
-const answers7 = [];
-const answers8 = [];
-const answers9 = [];
-const answers10 = [];
+const questions = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, bonus];
+const answers = [{
+        answer1: aA,
+        answer2: aB,
+        answer3: aC,
+        answer4: aD
+    },
+    {
+        answer1: bA,
+        answer2: bB,
+        answer3: bC,
+        answer4: bD
+    },
+    {
+        answer1: cA,
+        answer2: cB,
+        answer3: cC,
+        answer4: cD
+    },
+    {
+        answer1: dA,
+        answer2: dB,
+        answer3: dC,
+        answer4: dD
+    },
+    {
+        answer1: eA,
+        answer2: eB,
+        answer3: eC,
+        answer4: eD
+    },
+    {
+        answer1: fA,
+        answer2: fB,
+        answer3: fC,
+        answer4: fD
+    },
+    {
+        answer1: gA,
+        answer2: gB,
+        answer3: gC,
+        answer4: gD
+    },
+    {
+        answer1: hA,
+        answer2: hB,
+        answer3: hC,
+        answer4: hD
+    },
+    {
+        answer1: iA,
+        answer2: iB,
+        answer3: iC,
+        answer4: iD
+    },
+    {
+        answer1: jA,
+        answer2: jB,
+        answer3: jC,
+        answer4: jD
+    },
+];
 
 // Hides Back & Next Buttons on Page Load
 next.hide();
@@ -70,34 +163,55 @@ function startQuiz() {
     title.hide();
     startBox.hide();
     // Timer Func
-    let time = 90000;
-    var intervalID = setInterval(myCallback, 1000, time);
-    timer.text(time);
-    let min;
-    let sec;
+    let time = 900;
+    let intervalID = setInterval(myCallback, 1000, time);
+    timer.text('15:00');
 
     function myCallback() {
         time--;
-        min = Math.floor(time / 6000);
-        sec = ((time % 60000) / 1000).toFixed(0);
-        if (time <= 1) {
+        if (time === 0) {
             clearInterval(intervalID)
         }
-        timer.text(time);
+        let min = Math.floor(time / 60);
+        let sec = time - min * 60;
+        timer.text(min + ':' + sec);
+        if (time === 0) {
+            timer.text('Time Up').css({
+                'margin-left': '50%',
+                'margin-right': '50%'
+            });
+            next.hide();
+            back.hide();
+            quizEl.hide();
+        }
     }
-    started = true;
-    quizEl.append(li).text(questions[current]).addClass('li');
+    for (let i = 0; i < questions.length; i++) {
+        quizEl.append(li).html(
+            '<div>' + questions[current] + '</div><br>' +
+            '<div>' + answers[current].answer1 + '</div><br>' +
+            '<div>' + answers[current].answer2 + '</div><br>' +
+            '<div>' + answers[current].answer3 + '</div><br>' +
+            '<div>' + answers[current].answer4 + '</div><br>'
+        ).addClass('li');
+    }
 } // END Start Quiz END
 
-//Hide Elements on Load
+// Hide Elements on Load
 // Next 
 next.click(function() {
     current++;
     if (current > 9) {
         current = 0
     };
-    quizEl.append(li).text(questions[current]);
-    console.log(questions[current]);
+    for (let i = 0; i < questions.length; i++) {
+        quizEl.append(li).html(
+            '<div>' + questions[current] + '</div><br>' +
+            '<div>' + answers[current].answer1 + '</div><br>' +
+            '<div>' + answers[current].answer2 + '</div><br>' +
+            '<div>' + answers[current].answer3 + '</div><br>' +
+            '<div>' + answers[current].answer4 + '</div><br>'
+        ).addClass('li');
+    }
 });
 // Back
 back.click(function() {
@@ -105,8 +219,15 @@ back.click(function() {
     if (current < 0) {
         current = 9;
     }
-    quizEl.append(li).text(questions[current]);
-    console.log(questions[current]);
+    for (let i = 0; i < questions.length; i++) {
+        quizEl.append(li).html(
+            '<div>' + questions[current] + '</div><br>' +
+            '<div>' + answers[current].answer1 + '</div><br>' +
+            '<div>' + answers[current].answer2 + '</div><br>' +
+            '<div>' + answers[current].answer3 + '</div><br>' +
+            '<div>' + answers[current].answer4 + '</div><br>'
+        ).addClass('li');
+    }
 });
 startBtn.click(function() {
     startQuiz();
