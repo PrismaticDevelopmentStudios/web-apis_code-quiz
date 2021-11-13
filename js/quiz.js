@@ -24,10 +24,10 @@ const aD = "d. window.open()";
 // 2
 const q2 = '2. Choose the option that is NOT part of the 3 "stack"s of web development?';
 // Answers
-const bA = "a. Testing Frameworks";
+const bA = "a. Testing frameworks";
 const bB = "b. Backend";
-const bC = "c. Front End";
-const bD = "d. Full Stack";
+const bC = "c. Front end";
+const bD = "d. Full stack";
 // 3
 const q3 = '3. What is the difference between a "var" and a "const" in JavaScript?';
 // Answers
@@ -197,9 +197,9 @@ function startQuiz() {
     for (let i = 0; i < questions.length; i++) {
         quizEl.append(li).html(
             '<div>' + questions[current] + '</div><br>' +
-            '<div class="answers" onclick="select()">' + answers[current].answer1 + '</div><br>' + '<div class="answers" onclick="select()">' + answers[current].answer2 + '</div><br>' +
-            '<div class="answers" onclick="select()">' + answers[current].answer3 + '</div><br>' +
-            '<div class="answers" onclick="select()">' + answers[current].answer4 + '</div><br>'
+            '<div class="answers">' + answers[current].answer1 + '</div><br>' + '<div class="answers">' + answers[current].answer2 + '</div><br>' +
+            '<div class="answers">' + answers[current].answer3 + '</div><br>' +
+            '<div class="answers">' + answers[current].answer4 + '</div><br>'
         ).addClass('li');
     }
 } // END Start Quiz END
@@ -214,9 +214,9 @@ next.click(function() {
     for (let i = 0; i < questions.length; i++) {
         quizEl.append(li).html(
             '<div>' + questions[current] + '</div><br>' +
-            '<div class="answers" onclick="select()">' + answers[current].answer1 + '</div><br>' + '<div class="answers" onclick="select()">' + answers[current].answer2 + '</div><br>' +
-            '<div class="answers" onclick="select()">' + answers[current].answer3 + '</div><br>' +
-            '<div class="answers" onclick="select()">' + answers[current].answer4 + '</div><br>'
+            '<div class="answers">' + answers[current].answer1 + '</div><br>' + '<div class="answers">' + answers[current].answer2 + '</div><br>' +
+            '<div class="answers">' + answers[current].answer3 + '</div><br>' +
+            '<div class="answers">' + answers[current].answer4 + '</div><br>'
         ).addClass('li');
     }
 });
@@ -229,12 +229,19 @@ back.click(function() {
     for (let i = 0; i < questions.length; i++) {
         quizEl.append(li).html(
             '<div>' + questions[current] + '</div><br>' +
-            '<div class="answers" onclick="select()">' + answers[current].answer1 + '</div><br>' + '<div class="answers" onclick="select()">' + answers[current].answer2 + '</div><br>' +
-            '<div class="answers" onclick="select()">' + answers[current].answer3 + '</div><br>' +
-            '<div class="answers" onclick="select()">' + answers[current].answer4 + '</div><br>'
+            '<div class="answers">' + answers[current].answer1 + '</div><br>' + '<div class="answers">' + answers[current].answer2 + '</div><br>' +
+            '<div class="answers">' + answers[current].answer3 + '</div><br>' +
+            '<div class="answers">' + answers[current].answer4 + '</div><br>'
         ).addClass('li');
     }
 });
 startBtn.click(function() {
     startQuiz();
+});
+$(document).on('click', '.answers', function(e) {
+    console.log(e.target);
+    $(this).css({
+        'background-color': 'yellow',
+        'color': 'black'
+    });
 });
