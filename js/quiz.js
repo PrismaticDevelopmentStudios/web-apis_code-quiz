@@ -93,7 +93,8 @@ const answers = [{
         answer1: aA,
         answer2: aB,
         answer3: aC,
-        answer4: aD
+        answer4: aD,
+        correct: aB
     },
     {
         answer1: bA,
@@ -238,9 +239,17 @@ back.click(function() {
 startBtn.click(function() {
     startQuiz();
 });
+
 $(document).on('click', '.answers', function(e) {
     console.log(e.target);
+    $('.answers').css({
+        'border': 'none'
+    });
     $(this).css({
         'border': '2px solid yellow'
     });
+    console.log($(this).text());
+    if ($(this).text() === answers[current].correct) {
+        console.log('correct');
+    }
 });
