@@ -241,7 +241,6 @@ startBtn.click(function() {
 $(document).on('click', '.answers', function(e) {
     console.log(e.target);
     $(this).css({
-        'background-color': 'yellow',
-        'color': 'black'
+        'border': '2px solid yellow'
     });
 });
