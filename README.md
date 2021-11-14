@@ -32,4 +32,4 @@ jQuery
 ![Screen Shot 2021-11-14 at 12 43 46 PM](https://user-images.githubusercontent.com/34839284/141696063-f129992f-d315-464a-9b90-846249d307b4.png)
   7. If you click exit or submit you will be asked if you actually want to submit and exit the quiz.
   ![Screen Shot 2021-11-14 at 12 49 41 PM](https://user-images.githubusercontent.com/34839284/141696195-2b0cd9aa-41d0-4a1b-a5dc-6ee1158e3cbc.png)
-  8. If the time runs out your selected answers will be used to calculate your scaore.
+  8. If the timer runs out your selected answers will be used to calculate your score.
