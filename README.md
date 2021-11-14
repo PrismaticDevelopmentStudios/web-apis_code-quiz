@@ -10,7 +10,7 @@ This repository contains the code for a deployed web developer JavaScript quiz.
 * [Instructions](#instructions)
 
 ## Contact
-<a href="https://matthewbrignola@du.edu">Email</a> <br>
+<a href="mailto: matthewbrignola@du.edu">Email</a> <br>
 <a href="https://www.linkedin.com/in/matthewbrignola/">LinkedIn</a> <br>
 <a href="https://github.com/PrismaticDevelopmentStudios">GitHub</a> <br>
 ## Technologies
