@@ -62,7 +62,6 @@ button {
 /* Start Btn */
 
 #startBtn {
-    padding: .5%;
     outline: none;
     border: none;
     box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.5);
@@ -70,14 +69,66 @@ button {
     display: inline-block;
     cursor: pointer;
     right: 2em;
+    background-color: green;
+    color: white;
+    padding: 1%;
+    font-size: 2.2em;
 }
 
 #startBtn:hover {
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.5);
+    font-size: 2em;
+    background-color: rgb(1, 70, 1);
+}
+
+#scoreBtn {
+    outline: none;
+    border: none;
+    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    right: 2em;
+    background-color: rgb(0, 23, 128);
+    color: white;
+    padding: 1%;
+    font-size: 2.2em;
+    margin-left: 5%;
+}
+
+#scoreBtn:hover {
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.5);
+    font-size: 2em;
+    background-color: rgb(0, 11, 61);
+}
+
+.scoreBoard {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#exit button {
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.5);
+    font-size: 1.5em;
+    cursor: pointer;
+    float: right;
+    background-color: red;
+    color: white;
+    margin-top: 1%;
+    margin-right: 2%;
+    border-radius: 5px;
+}
+
+#submit {
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.5);
+    font-size: 1.5em;
+    cursor: pointer;
+    float: right;
     background-color: green;
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    padding: .75%;
-    font-size: 1.2em;
-    color: beige;
+    color: white;
+    margin-top: 1%;
+    margin-right: 2%;
+    border-radius: 5px;
 }
 
 
@@ -89,7 +140,7 @@ button {
     cursor: pointer;
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
     border-radius: 5px;
-    padding: 1%;
+    padding: 3%;
     font-family: monospace;
 }
 
@@ -110,10 +161,12 @@ button {
     justify-content: center;
 }
 
-#startTitle {
+.startTitle {
     text-indent: 2em;
     margin-left: 20%;
     margin-right: 20%;
+    margin-bottom: .5%;
+    margin-top: .5%;
 }
 
 
@@ -164,4 +217,29 @@ footer {
     text-align: center;
     font-size: 2em;
     font-weight: 800;
+}
+
+@media only screen and (max-width: 1024px) {
+    .li {
+        margin-top: 15%;
+    }
+    #timer {
+        margin-left: 50vw;
+        margin-right: 50vw;
+        margin-bottom: 5%;
+        position: relative;
+        text-align: center;
+    }
+    #startBtn {
+        font-size: 2em;
+        background-color: green;
+        color: white;
+        padding: 3%;
+        font-size: 2em;
+    }
+    #exit,
+    #finish {
+        display: flex;
+        justify-content: center;
+    }
 }
