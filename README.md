@@ -29,6 +29,8 @@ JavaScript
   3. Read the options and once you click and answer it will be submitted. Until the time tuns out or the submit button is pressed you can schoose different answers though.
   ![Screen Shot 2021-11-14 at 12 37 06 PM](https://user-images.githubusercontent.com/34839284/141695842-d249de19-af3e-4e26-b8fa-6e357ccf4afc.png)
   4. If you select a wrong answer 10 seconds will be subtracted from the timer.
-  ![Screen Shot 2021-11-14 at 12 39 11 PM](https://user-images.githubusercontent.com/34839284/141695864-7364aeff-34e9-408b-967c-d87bc87ddb61.png)
-  5. Click the "Submit" button to get scored and then the "Get scores" button to see the all the scores save on your local device you got with the specified initials.
- 6. Clcik the exit button if you would like to stop taking the quiz and not save your score.
+  ![Screen Shot 2021-11-14 at 12 40 12 PM](https://user-images.githubusercontent.com/34839284/141695896-da97c9c9-1768-4243-9ed9-9491500282b6.png)
+  5. Click the green "Submit" button to finish the quiz and get scored. Then the "Get scores" button to see the all the scores save on your local device you got with the specified initials.
+  ![Screen Shot 2021-11-14 at 12 40 56 PM](https://user-images.githubusercontent.com/34839284/141695971-57ab3ced-0ae8-4ff4-9225-5ba2e60a364e.png)
+ 6. Click the exit button if you would like to stop taking the quiz and not save your score.
+![Screen Shot 2021-11-14 at 12 43 46 PM](https://user-images.githubusercontent.com/34839284/141696063-f129992f-d315-464a-9b90-846249d307b4.png)
