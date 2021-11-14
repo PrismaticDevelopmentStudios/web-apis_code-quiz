@@ -400,7 +400,7 @@ function getScores() {
     while (i--) {
         scores.push(localStorage.getItem(keys[i]));
     }
-    scores = scores.join('');
+    scores = scores.join(' ');
     return scores;
 }
 
