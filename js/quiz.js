@@ -12,6 +12,7 @@ const div = $('<DIV>');
 const submitBtn = $('#submit');
 const scoreBoard = $('#scores');
 const scoreBtn = $('#scoreBtn');
+const exitBtn = $('#exitBtn');
 
 submitBtn.addClass('submit');
 
@@ -167,6 +168,7 @@ const answers = [{
 // Hides Back & Next Buttons on Page Load
 next.hide();
 back.hide();
+exitBtn.hide();
 submitBtn.hide();
 // Start Quiz
 let start = false;
@@ -182,6 +184,7 @@ function startQuiz() {
     title.hide();
     startBox.hide();
     scoreBoard.hide();
+    exitBtn.show();
     // Timer Func
     let intervalID = setInterval(myCallback, 1000, time);
     timer.text('15:00');
@@ -220,9 +223,10 @@ function startQuiz() {
     }
 } // END Start Quiz END
 
+let affirm;
 
 function finished() {
-    let affirm = confirm(`Are you sure you want to exit and submit your current score?`)
+    affirm = confirm(`Are you sure you want to exit and submit your current score?`)
     if (affirm) {
         console.log(correct, 'submit');
         if (score !== undefined) {
@@ -234,6 +238,16 @@ function finished() {
     sessionStorage.clear();
     location.reload();
 }
+
+exitBtn.on('click', function() {
+    if (affirm) {
+        quizEl.hide();
+        next.hide();
+        back.hide();
+        timer.hide();
+        finished();
+    }
+});
 
 // Hide Elements on Load
 // Next 
