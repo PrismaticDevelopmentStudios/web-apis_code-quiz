@@ -105,6 +105,8 @@ button {
 .scoreBoard {
     font-size: 1.5em;
     text-align: center;
+    margin-left: 40%;
+    margin-right: 40%;
 }
 
 #exit button {

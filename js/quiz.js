@@ -9,7 +9,6 @@ const quizEl = $('#quiz');
 const li = $('<LI>');
 const p = $('<A>')
 const div = $('<DIV>');
-const exitBtn = $('#exitBtn');
 const submitBtn = $('#submit');
 const scoreBoard = $('#scores');
 const scoreBtn = $('#scoreBtn');
@@ -91,7 +90,6 @@ const jC = 'c. Mocha';
 const jD = 'd. Jasmine';
 // Bonus
 const bonus = "What is an urnary operator?";
-// const textArea = quizEl.append(li).html('<textarea></textarea>')
 
 const questions = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, bonus];
 const answers = [{
@@ -169,7 +167,6 @@ const answers = [{
 // Hides Back & Next Buttons on Page Load
 next.hide();
 back.hide();
-exitBtn.hide();
 submitBtn.hide();
 // Start Quiz
 let start = false;
@@ -181,7 +178,6 @@ function startQuiz() {
     start = true;
     next.show();
     back.show();
-    exitBtn.show();
     submitBtn.show();
     title.hide();
     startBox.hide();
@@ -374,14 +370,14 @@ $(document).on('click', '.answers', function(e) {
 });
 
 function submit() {
-    let affirm = confirm(`Are you sure you're ready to finish?`);
-    if (affirm) {
-        console.log(correct, 'submit');
-        if (score !== undefined) {
-            localStorage.setItem(date, score);
-        }
-    } else {
-        return
+    if (score !== undefined) {
+        localStorage.setItem(date, score);
+        quizEl.hide();
+        next.hide();
+        back.hide();
+        timer.hide();
+        startBox.show();
+        finished();
     }
 }
 
@@ -404,7 +400,7 @@ function getScores() {
     while (i--) {
         scores.push(localStorage.getItem(keys[i]));
     }
-    scores = scores.join(', ');
+    scores = scores.join('');
     return scores;
 }
 
