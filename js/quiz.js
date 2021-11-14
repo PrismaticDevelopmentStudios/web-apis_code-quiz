@@ -297,6 +297,7 @@ $(document).on('click', '.answers', function(e) {
         } else {
             sessionStorage.setItem('1', 'Incorrect');
             incorrect++;
+            time = time - 10;
         }
     }
     if (current === 1) {
@@ -306,6 +307,7 @@ $(document).on('click', '.answers', function(e) {
         } else {
             sessionStorage.setItem('2', 'Incorrect');
             incorrect++;
+            time = time - 10;
         }
     }
     if (current === 2) {
@@ -315,6 +317,7 @@ $(document).on('click', '.answers', function(e) {
         } else {
             sessionStorage.setItem('3', 'Incorrect');
             incorrect++;
+            time = time - 10;
         }
     }
     if (current === 3) {
@@ -324,6 +327,7 @@ $(document).on('click', '.answers', function(e) {
         } else {
             sessionStorage.setItem('4', 'Incorrect');
             incorrect++;
+            time = time - 10;
         }
     }
     if (current === 4) {
@@ -333,6 +337,7 @@ $(document).on('click', '.answers', function(e) {
         } else {
             sessionStorage.setItem('5', 'Incorrect');
             incorrect++;
+            time = time - 10;
         }
     }
     if (current === 5) {
@@ -342,6 +347,7 @@ $(document).on('click', '.answers', function(e) {
         } else {
             sessionStorage.setItem('6', 'Incorrect');
             incorrect++;
+            time = time - 10;
         }
     }
     if (current === 6) {
@@ -351,6 +357,7 @@ $(document).on('click', '.answers', function(e) {
         } else {
             sessionStorage.setItem('7', 'Incorrect');
             incorrect++;
+            time = time - 10;
         }
     }
     if (current === 7) {
@@ -360,6 +367,7 @@ $(document).on('click', '.answers', function(e) {
         } else {
             sessionStorage.setItem('8', 'Incorrect');
             incorrect++;
+            time = time - 10;
         }
     }
     if (current === 8) {
@@ -369,6 +377,7 @@ $(document).on('click', '.answers', function(e) {
         } else {
             sessionStorage.setItem('9', 'Incorrect');
             incorrect++;
+            time = time - 10;
         }
     }
     if (current === 9) {
@@ -377,6 +386,7 @@ $(document).on('click', '.answers', function(e) {
         } else {
             sessionStorage.setItem('10', 'Incorrect');
             incorrect++;
+            time = time - 10;
         }
     }
     date = new Date;
