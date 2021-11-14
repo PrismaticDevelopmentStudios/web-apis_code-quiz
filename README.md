@@ -1,12 +1,11 @@
 # Web API Developer Quiz
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 ## Descripton
-This repository contains the code for a deployed web developer JavaScript quiz. 
+This repository contains the code for a deployed web developer HTML, CSS, JavaScript, and jQuery quiz. 
 
 ## Table of Contents
 * [Contact](#contact)
 * [Technologies](#technologies)  
-* [Video](#video)
 * [Instructions](#instructions)
 
 ## Contact
@@ -17,13 +16,10 @@ This repository contains the code for a deployed web developer JavaScript quiz.
 HTML
 CSS
 JavaScript
-## Video
-<a href="">Video Hosted With Google Drive</<a>
+jQuery
 ## Instructions
-
   1. Click the "Start" button and enter your initials or name.
   ![Screen Shot 2021-11-14 at 12 37 06 PM](https://user-images.githubusercontent.com/34839284/141695805-c695798a-93a0-499c-8600-7c07971ca9df.png)
-
   2. If you have already submitted a quiz then click the Get scores button to view the scores.
   ![Screen Shot 2021-11-14 at 12 34 52 PM](https://user-images.githubusercontent.com/34839284/141695734-c070c727-9073-48de-92d7-473f847d7a61.png)
   3. Read the options and once you click and answer it will be submitted. Until the time tuns out or the submit button is pressed you can schoose different answers though.
