@@ -34,3 +34,5 @@ JavaScript
   ![Screen Shot 2021-11-14 at 12 40 56 PM](https://user-images.githubusercontent.com/34839284/141695971-57ab3ced-0ae8-4ff4-9225-5ba2e60a364e.png)
  6. Click the exit button if you would like to stop taking the quiz and not save your score.
 ![Screen Shot 2021-11-14 at 12 43 46 PM](https://user-images.githubusercontent.com/34839284/141696063-f129992f-d315-464a-9b90-846249d307b4.png)
+  7. If you click exit por submit you will be asked if you actually want to submit and exit the quiz.
+  
